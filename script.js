@@ -54,3 +54,15 @@ const clearButton = document.querySelector('.clear-btn');
 clearButton.addEventListener('click', () => {
   createGrid(squaresPerSide);
 })
+
+let drawEnabled = true;
+
+const drawButton = document.querySelector('.draw-btn');
+drawButton.addEventListener('click', () => {
+  drawEnabled = !drawEnabled;
+})
+
+document.addEventListener('keydown', (e) => {
+  console.log(e.code);
+  if (e.code === 'Space') drawEnabled = !drawEnabled;
+});
