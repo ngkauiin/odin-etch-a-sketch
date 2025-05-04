@@ -19,7 +19,7 @@ function addHoverClass() {
   const squareDivs = document.querySelectorAll('div.grid-container div');
   squareDivs.forEach((div) => {
     div.addEventListener('mouseover', () => {
-      div.classList.add('hovered');
+      if (drawEnabled) div.classList.add('hovered');
     })
   });
 }
