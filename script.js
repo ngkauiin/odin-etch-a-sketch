@@ -19,9 +19,26 @@ function addHoverClass() {
   const squareDivs = document.querySelectorAll('div.grid-container div');
   squareDivs.forEach((div) => {
     div.addEventListener('mouseover', () => {
+      div.style.backgroundColor = generateRandomColor();
       div.classList.add('hovered');
     })
   });
+}
+
+const hexCharacters = [0,1,2,3,4,5,6,7,8,9,"A","B","C","D","E","F"];
+
+function getCharacters(index) {
+  return hexCharacters[index];
+}
+
+function generateRandomColor() {
+  let hexColor = "#";
+
+  for (let position = 0; position < 6; position++) {
+    const randomPosition = Math.floor ( Math.random() * hexCharacters.length )
+    hexColor += getCharacters(randomPosition);
+  }
+  return hexColor;
 }
 
 const gridSizeBtn = document.querySelector('.grid-size-btn');
