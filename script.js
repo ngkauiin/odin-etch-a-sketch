@@ -59,10 +59,15 @@ let drawEnabled = true;
 
 const drawButton = document.querySelector('.draw-btn');
 drawButton.addEventListener('click', () => {
-  drawEnabled = !drawEnabled;
+  switchDraw();
 })
 
 document.addEventListener('keydown', (e) => {
-  console.log(e.code);
-  if (e.code === 'Space') drawEnabled = !drawEnabled;
+  if (e.code === 'Space') switchDraw();
 });
+
+function switchDraw() {
+  drawEnabled = !drawEnabled;
+  (drawEnabled) ? 
+  drawButton.textContent = 'Draw (Space) - Enabled' : drawButton.textContent = 'Draw (Space) - Disabled';
+}
