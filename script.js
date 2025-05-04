@@ -8,7 +8,6 @@ function createGrid(squaresPerSide) {
   for (let i = 0; i < totalSquares; i++) {
     const div = document.createElement('div');
     div.style.flexBasis = squareWidth + "%";
-    div.textContent = i;
     gridContainerDiv.appendChild(div);
   }
   addHoverClass();
