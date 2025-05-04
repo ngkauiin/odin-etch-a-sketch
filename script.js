@@ -1,6 +1,8 @@
+let squaresPerSide = 16;
+
 function createGrid(squaresPerSide) {
   const gridContainerDiv = document.querySelector('.grid-container');
-  const totalSquares = Math.pow(squaresPerSide,2);
+  const totalSquares = Math.pow(squaresPerSide, 2);
   for (let i = 0; i < totalSquares; i++) {
     const div = document.createElement('div');
     div.textContent = i;
@@ -12,14 +14,21 @@ createGrid(16);
 
 const squareDivs = document.querySelectorAll('div.grid-container div');
 squareDivs.forEach((div) => {
-  div.addEventListener('mouseover', ()=> { 
+  div.addEventListener('mouseover', () => {
     div.classList.add('hovered');
   })
 });
 
 const gridSizeBtn = document.querySelector('.grid-size-btn');
 gridSizeBtn.addEventListener('click', () => {
-
+  squaresPerSide = Number(getSquarePerSide());
+  while
+  (
+    squaresPerSide <= 0 ||
+    squaresPerSide > 100 ||
+    !Number.isInteger(squaresPerSide)
+  )
+    squaresPerSide = Number(getSquarePerSide(false));
 });
 
 function getSquarePerSide(firstTime = true) {
