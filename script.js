@@ -5,7 +5,7 @@ function createGrid() {
     div.textContent = i;
     gridContainerDiv.appendChild(div);
   }
-}
+};
 
 createGrid();
 
@@ -14,4 +14,9 @@ squareDivs.forEach((div) => {
   div.addEventListener('mouseover', ()=> { 
     div.classList.add('hovered');
   })
-})
+});
+
+const gridSizeBtn = document.querySelector('.grid-size-btn');
+gridSizeBtn.addEventListener('click', () => {
+  console.log('clicked');
+});
