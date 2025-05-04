@@ -63,7 +63,7 @@ drawButton.addEventListener('click', () => {
 })
 
 document.addEventListener('keydown', (e) => {
-  if (e.code === 'Space') switchDraw();
+  if (e.code === 'KeyD') switchDraw();
 });
 
 function switchDraw() {
