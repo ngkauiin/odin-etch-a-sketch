@@ -15,11 +15,14 @@ function createGrid(squaresPerSide) {
 
 createGrid(squaresPerSide);
 
+
+
 function addHoverClass() {
   const squareDivs = document.querySelectorAll('div.grid-container div');
   squareDivs.forEach((div) => {
     div.addEventListener('mouseover', () => {
       div.style.backgroundColor = generateRandomColor();
+      div.style.opacity = increaseOpacity();
       div.classList.add('hovered');
     })
   });
@@ -39,6 +42,12 @@ function generateRandomColor() {
     hexColor += getCharacters(randomPosition);
   }
   return hexColor;
+}
+
+let opacityValue = 0;
+
+function increaseOpacity() {
+  return opacityValue += 0.1;
 }
 
 const gridSizeBtn = document.querySelector('.grid-size-btn');
