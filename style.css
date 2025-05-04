@@ -11,7 +11,7 @@ div div {
   font-size: 10px;
 }
 
-div div:hover {
+div div.hovered {
   background-color: gray;
 }
 
