@@ -4,6 +4,7 @@
 This project is to create `n`x`n` squares grid that allows users to draw as they hover the grid.
 
 ### Demo Link
+https://ngkauiin.github.io/odin-etch-a-sketch/
 
 ### What Problem It Solves
 This project is to practice using Javascript to create any number of `div`s and uliltising CSS `flexbox` to make the grid squared with any given grid width.
