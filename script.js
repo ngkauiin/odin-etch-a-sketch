@@ -69,5 +69,5 @@ document.addEventListener('keydown', (e) => {
 function switchDraw() {
   drawEnabled = !drawEnabled;
   (drawEnabled) ? 
-  drawButton.textContent = 'Draw (Space) - Enabled' : drawButton.textContent = 'Draw (Space) - Disabled';
+  drawButton.textContent = 'Draw (D) - Enabled' : drawButton.textContent = 'Draw (D) - Disabled';
 }
