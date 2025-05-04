@@ -1,4 +1,4 @@
-let squaresPerSide = 16;
+let squaresPerSide = 100;
 
 function createGrid(squaresPerSide) {
   const gridContainerDiv = document.querySelector('.grid-container');
@@ -49,3 +49,8 @@ function removeGrid() {
     gridContainerDiv.removeChild(gridContainerDiv.firstElementChild);
   }
 }
+
+const clearButton = document.querySelector('.clear-btn');
+clearButton.addEventListener('click', () => {
+  createGrid(squaresPerSide);
+})
