@@ -8,3 +8,10 @@ function createGrid() {
 }
 
 createGrid();
+
+const squareDivs = document.querySelectorAll('div.grid-container div');
+squareDivs.forEach((div) => {
+  div.addEventListener('mouseover', ()=> { 
+    console.log(div.textContent);
+  })
+})

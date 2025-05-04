@@ -11,6 +11,10 @@ div div {
   font-size: 10px;
 }
 
+div div:hover {
+  background-color: gray;
+}
+
 .grid-container {
   display: flex;
   flex-wrap: wrap;
