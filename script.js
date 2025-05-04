@@ -10,7 +10,7 @@ function createGrid(squaresPerSide) {
   }
 };
 
-createGrid(16);
+createGrid(squaresPerSide);
 
 const squareDivs = document.querySelectorAll('div.grid-container div');
 squareDivs.forEach((div) => {
@@ -27,8 +27,10 @@ gridSizeBtn.addEventListener('click', () => {
     squaresPerSide <= 0 ||
     squaresPerSide > 100 ||
     !Number.isInteger(squaresPerSide)
-  )
+  ) {
     squaresPerSide = Number(getSquarePerSide(false));
+  }
+  createGrid(squaresPerSide);
 });
 
 function getSquarePerSide(firstTime = true) {
