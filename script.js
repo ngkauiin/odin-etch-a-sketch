@@ -1,13 +1,14 @@
-function createGrid() {
+function createGrid(squaresPerSide) {
   const gridContainerDiv = document.querySelector('.grid-container');
-  for (let i = 0; i < 256; i++) {
+  const totalSquares = Math.pow(squaresPerSide,2);
+  for (let i = 0; i < totalSquares; i++) {
     const div = document.createElement('div');
     div.textContent = i;
     gridContainerDiv.appendChild(div);
   }
 };
 
-createGrid();
+createGrid(16);
 
 const squareDivs = document.querySelectorAll('div.grid-container div');
 squareDivs.forEach((div) => {
@@ -18,5 +19,10 @@ squareDivs.forEach((div) => {
 
 const gridSizeBtn = document.querySelector('.grid-size-btn');
 gridSizeBtn.addEventListener('click', () => {
-  console.log('clicked');
+
 });
+
+function getSquarePerSide(firstTime = true) {
+  if (firstTime) return prompt('How many square per side for the grid?');
+  if (!firstTime) return prompt("Please enter a number between 1-100\nHow many square per side for the grid?");
+}
